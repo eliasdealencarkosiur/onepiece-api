@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .App {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .App-header {
+    background-color: #009688;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .App-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .character-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas para 5 personagens na primeira linha */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .character-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .character-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .character-info {
+    padding: 15px;
+    text-align: center;
+    background-color: #ffffffd9; /* Fundo branco com opacidade para tornar as informações visíveis */
+    backdrop-filter: blur(10px); /* Desfoque no fundo */
+    border-radius: 8px;
+  }
+  
+  .character-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #009688;
+  }
+  
+  .character-info p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #009688;
+    margin-top: 20px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ddd;
+  }
+  
+  .character-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    z-index: 100;
+  }
+  
+  .character-details img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .character-details p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  .close-btn {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .close-btn:hover {
+    background-color: #00796b;
+  }
+  
